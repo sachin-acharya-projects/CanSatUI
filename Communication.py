@@ -38,7 +38,11 @@ class Communication:
     
     def getData(self):
         """Retrive data from Serial Port"""
-        return self.serial_connection.readline().decode().strip().split(",") # Read single line until \n
+        my_data: list = self.serial_connection.readline().decode().strip().split(",")
+        if my_data[0] == 'HEADING':
+            return
+        print(my_data)
+        return my_data[1:] # Read single line until \n
     
     def isOpen(self):
         "Return True if connection is active otherwise return False"

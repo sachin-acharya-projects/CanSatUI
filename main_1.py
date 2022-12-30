@@ -121,6 +121,7 @@ class Ui_MainWindow(object):
         self.graphicsView_3.setMaximumSize(QtCore.QSize(500, 500))
         self.graphicsView_3.setObjectName("graphicsView_3")
         self.gridLayout_3.addWidget(self.graphicsView_3, 1, 0, 1, 1)
+        
         self.graphicsView_3.addLegend()
         self.graphicsView_3.hideAxis("bottom")
         self.x_axis = self.graphicsView_3.plot(pen=(102, 252, 241), name='X')
